@@ -15,10 +15,7 @@ spaceship_git_user() {
   local email="$(git config user.email)"
 
   if [ "${SPACESHIP_GIT_NAME_SHOW}" = "auto" ] || [ "${SPACESHIP_GIT_NAME_SHOW}" = "auto_name" ] ; then
-    local global_username="$(git config --global user.name)"
-    if [ "${username}" != "${global_username}" ]; then
-      username="${global_username}"
-    else
+    if [ "${username}" = "$(git config --global user.name)" ]; then
       unset username
     fi
   fi
@@ -28,10 +25,7 @@ spaceship_git_user() {
   fi
 
   if [ "${SPACESHIP_GIT_NAME_SHOW}" = "auto" ] || [ "${SPACESHIP_GIT_NAME_SHOW}" = "auto_email" ] ; then
-    local global_email="$(git config --global user.email)"
-    if [ "${email}" != "${global_email}" ]; then
-      email="${global_email}"
-    else
+    if [ "${email}" == "$(git config --global user.email)"]; then
       unset email
     fi
   fi
