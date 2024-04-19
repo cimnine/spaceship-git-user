@@ -22,11 +22,11 @@ This is a fork of [`git-name` by hexcowboy][original].
 
 To install this plugin you need to source it from your `.zshrc`
 
-1. Save `spaceship-git-user.sh` to your home folder (`~`)
+1. Save `spaceship-git-user.zsh` to your home folder (`~`)
 2. In your `.zshrc`, source the plugin before you initialize spaceship. You can rename the file to anything you want.
 
 ```sh
-. ~/spaceship-git-user.sh # <------ Add this line before the following!
+. ~/spaceship-git-user.zsh # <------ Add this line before the following!
 autoload -U promptinit; promptinit
 prompt spaceship
 ```

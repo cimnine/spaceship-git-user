@@ -43,5 +43,5 @@ _spaceship_git_user() {
     --prefix "${SPACESHIP_GIT_USER_PREFIX}" \
     --suffix "${SPACESHIP_GIT_USER_SUFFIX}" \
     --symbol "${symbol}" \
-    "${text}"
+    "${text} "
 }
