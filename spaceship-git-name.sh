@@ -19,7 +19,7 @@ spaceship_git_user() {
     if [ "${username}" != "${global_username}" ]; then
       username="${global_username}"
     else
-      unset unsername
+      unset username
     fi
   fi
 
