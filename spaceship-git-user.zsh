@@ -38,16 +38,15 @@ _spaceship_git_user() {
   [[ $SPACESHIP_GIT_USER_SHOW == false ]] && return
   spaceship::is_git || return
 
-  local text="$(git config user.${property})"
+  local text
+  if [ "${SPACESHIP_GIT_USER_SHOW}" = "auto" ]; then
+    text="$(git config --local user.${property})"
+  else
+    text="$(git config user.${property})"
+  fi
 
   if [ -z "${text}" ]; then
     return;
-  fi
-
-  if [ "${SPACESHIP_GIT_USER_SHOW}" = "auto" ]; then
-    if [ "${text}" = "$(git config --global user.${property})" ]; then
-      return;
-    fi
   fi
 
   if [ "${SPACESHIP_GIT_USER_INDICATION}" != "long" ] && [ "${SPACESHIP_GIT_USER_INDICATION}" != "long_${property}" ]; then
