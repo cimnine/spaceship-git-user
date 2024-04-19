@@ -1,11 +1,11 @@
-# spaceship-git-name
+# spaceship-git-user
 
 ![Preview of the plugin](todo)
 
 A [Spaceship Prompt Section][spaceship-prompt] plugin that shows the current git user name and email.
 By default, they are only shown if the local setting (`git config user.name`) differs from the global setting (`git config --global user.name`).
 
-This is a fork of the section made by [hexcowboy][original].
+This is a fork of [`git-name` by hexcowboy][original].
 
 [spaceship-prompt]: https://github.com/denysdovhan/spaceship-prompt
 [original]: https://github.com/hexcowboy/spaceship-git-name
@@ -22,11 +22,11 @@ This is a fork of the section made by [hexcowboy][original].
 
 To install this plugin you need to source it from your `.zshrc`
 
-1. Save `spaceship-git-name.sh` to your home folder (`~`)
+1. Save `spaceship-git-user.sh` to your home folder (`~`)
 2. In your `.zshrc`, source the plugin before you initialize spaceship. You can rename the file to anything you want.
 
 ```sh
-. ~/spaceship-git-name.sh # <------ Add this line before the following!
+. ~/spaceship-git-user.sh # <------ Add this line before the following!
 autoload -U promptinit; promptinit
 prompt spaceship
 ```
@@ -34,7 +34,7 @@ prompt spaceship
 ### Zgen
 
 ```sh
-zgen load cimnine/spaceship-git-name # <------ must be before loading spaceship!
+zgen load cimnine/spaceship-git-user spaceship-git-user main # <------ must be before loading spaceship!
 zgen load spaceship-prompt/spaceship-prompt spaceship
 ```
 
@@ -45,7 +45,8 @@ Add `git_user` to your prompt.
 ```sh
 # .zshrc or .spaceshiprc.zsh
 
-spaceship add --before git git_user
+spaceship add --before git git_user_name
+spaceship add --after git_user_name git_user_email
 ```
 
 Or if you defined [an explicit promp order][spaceship-prompt-order]:
@@ -58,7 +59,8 @@ Or if you defined [an explicit promp order][spaceship-prompt-order]:
 SPACESHIP_PROMPT_ORDER=(
   # possibly other sections
   git
-  git_user
+  git_user_name
+  git_user_email
   # possibly other sections
 )
 ```
@@ -70,7 +72,8 @@ You can also add this section to the right prompt:
 
 SPACESHIP_RPROMPT_ORDER=(
   # possibly other sections
-  git_user
+  git_user_name
+  git_user_email
   # possibly other sections
 )
 ```
