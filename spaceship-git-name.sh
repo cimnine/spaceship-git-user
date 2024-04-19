@@ -36,7 +36,7 @@ spaceship_git_user() {
   fi
 
   if [ -n "${email}" ]; then
-    if [ "${SPACESHIP_GIT_NAME_INDICATION}" = "long" ] || [ "${SPACESHIP_GIT_NAME_INDICATION}" = "long_name" ] ; then
+    if [ "${SPACESHIP_GIT_NAME_INDICATION}" = "long" ] || [ "${SPACESHIP_GIT_NAME_INDICATION}" = "long_email" ] ; then
       section+="${SPACESHIP_GIT_EMAIL_SYMBOL}${email} "
     else
       section+="${SPACESHIP_GIT_EMAIL_SYMBOL}"
