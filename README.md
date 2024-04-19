@@ -2,8 +2,8 @@
 
 ![Preview of the plugin](https://github.com/cimnine/spaceship-git-user/assets/804532/ab93b25c-7014-44b7-a01e-94a5624cd94f)
 
-A [Spaceship Prompt Section][spaceship-prompt] plugin that shows the current git user name and email.
-By default, they are only shown if the local setting (`git config user.name`) differs from the global setting (`git config --global user.name`).
+A [Spaceship Prompt Section][spaceship-prompt] plugin that shows the current git username and email.
+By default, they are only shown if the local setting (`git config --local user.name`) differs from the default setting (`git config user.name`).
 
 This is a fork of [`git-name` by hexcowboy][original].
 
@@ -49,7 +49,7 @@ spaceship add --before git git_user_name
 spaceship add --after git_user_name git_user_email
 ```
 
-Or if you defined [an explicit promp order][spaceship-prompt-order]:
+Or if you defined [an explicit prompt order][spaceship-prompt-order]:
 
 [spaceship-prompt-order]: https://github.com/denysdovhan/spaceship-prompt/blob/master/docs/Options.md#order
 
@@ -103,14 +103,16 @@ SPACESHIP_GIT_EMAIL_COLOR="red"
 SPACESHIP_GIT_USER_COLOR="red"
 ```
 
-### SPACESHIP_GIT_USER_SHOW
+### SPACESHIP_GIT_x_SHOW
 
 ```sh
-# Only show the sections in which the global value is different from the local one.
+# Only show the sections in which the default value is different from the local one.
 # Default behavior.
 SPACESHIP_GIT_USER_SHOW="auto"
+SPACESHIP_GIT_EMAIL_SHOW="$SPACESHIP_GIT_USER_SHOW"
+SPACESHIP_GIT_NAME_SHOW="$SPACESHIP_GIT_USER_SHOW"
 
-# Always show user.name / user.email sections
+# Always show the sections
 SPACESHIP_GIT_USER_SHOW="always"
 
 # Never show either section (this might be useful if you use direnv)
@@ -118,19 +120,15 @@ SPACESHIP_GIT_USER_SHOW="never"
 SPACESHIP_GIT_USER_SHOW=false
 ```
 
-### SPACESHIP_GIT_USER_INDICATION
+### SPACESHIP_GIT_x_INDICATION
 
 ```sh
 # Only show the icons, not the actual values.
 # Default behavior.
 SPACESHIP_GIT_USER_INDICATION="short"
+SPACESHIP_GIT_EMAIL_INDICATION="$SPACESHIP_GIT_USER_INDICATION"
+SPACESHIP_GIT_NAME_INDICATION="$SPACESHIP_GIT_USER_INDICATION"
 
 # Show the full values.
 SPACESHIP_GIT_USER_INDICATION="long"
-
-# Show the full name, but not the full email.
-SPACESHIP_GIT_USER_INDICATION="long_name"
-
-# Show the full email, but not the full name.
-SPACESHIP_GIT_USER_INDICATION="long_email"
 ```
