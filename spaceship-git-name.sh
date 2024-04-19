@@ -25,7 +25,7 @@ spaceship_git_user() {
   fi
 
   if [ "${SPACESHIP_GIT_NAME_SHOW}" = "auto" ] || [ "${SPACESHIP_GIT_NAME_SHOW}" = "auto_email" ] ; then
-    if [ "${email}" == "$(git config --global user.email)"]; then
+    if [ "${email}" = "$(git config --global user.email)" ]; then
       unset email
     fi
   fi
