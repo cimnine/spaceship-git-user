@@ -1,6 +1,6 @@
 # spaceship-git-user
 
-![Preview of the plugin](todo)
+![Preview of the plugin](https://github.com/cimnine/spaceship-git-user/assets/804532/ab93b25c-7014-44b7-a01e-94a5624cd94f)
 
 A [Spaceship Prompt Section][spaceship-prompt] plugin that shows the current git user name and email.
 By default, they are only shown if the local setting (`git config user.name`) differs from the global setting (`git config --global user.name`).
