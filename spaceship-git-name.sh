@@ -5,6 +5,7 @@ SPACESHIP_GIT_USER_SYMBOL="${SPACESHIP_GIT_USER_SYMBOL="♔ "}"
 SPACESHIP_GIT_EMAIL_SYMBOL="${SPACESHIP_GIT_EMAIL_SYMBOL="✉︎ "}"
 SPACESHIP_GIT_USER_COLOR="${SPACESHIP_GIT_USER_COLOR="red"}"
 SPACESHIP_GIT_NAME_SHOW="${SPACESHIP_GIT_NAME_SHOW="auto"}"
+SPACESHIP_GIT_NAME_INDICATION="${SPACESHIP_GIT_NAME_INDICATION="short"}"
 
 spaceship_git_user() {
   spaceship::is_git || return
@@ -21,7 +22,11 @@ spaceship_git_user() {
   fi
 
   if [ -n "${username}" ]; then
-    section+="${SPACESHIP_GIT_USER_SYMBOL}${username} "
+    if [ "${SPACESHIP_GIT_NAME_INDICATION}" = "long" ] || [ "${SPACESHIP_GIT_NAME_INDICATION}" = "long_name" ] ; then
+      section+="${SPACESHIP_GIT_USER_SYMBOL}${username} "
+    else
+      section+="${SPACESHIP_GIT_USER_SYMBOL}"
+    fi
   fi
 
   if [ "${SPACESHIP_GIT_NAME_SHOW}" = "auto" ] || [ "${SPACESHIP_GIT_NAME_SHOW}" = "auto_email" ] ; then
@@ -31,7 +36,12 @@ spaceship_git_user() {
   fi
 
   if [ -n "${email}" ]; then
-    section+="${SPACESHIP_GIT_EMAIL_SYMBOL}${email} "
+    if [ "${SPACESHIP_GIT_NAME_INDICATION}" = "long" ] || [ "${SPACESHIP_GIT_NAME_INDICATION}" = "long_name" ] ; then
+      section+="${SPACESHIP_GIT_EMAIL_SYMBOL}${email} "
+    else
+      section+="${SPACESHIP_GIT_EMAIL_SYMBOL}"
+    fi
+
   fi
 
   if [ -n "${section}" ]; then

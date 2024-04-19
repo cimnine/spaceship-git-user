@@ -122,3 +122,20 @@ SPACESHIP_GIT_NAME_SHOW="always"
 # Never show them (this might be useful if you use direnv)
 SPACESHIP_GIT_NAME_SHOW="never"
 ```
+
+### SPACESHIP_GIT_NAME_INDICATION
+
+```sh
+# Only show the icons, not the actual values.
+# Default
+SPACESHIP_GIT_NAME_INDICATION="short"
+
+# Show the full values.
+SPACESHIP_GIT_NAME_INDICATION="long"
+
+# Show the full name, but not the full email.
+SPACESHIP_GIT_NAME_INDICATION="long_name"
+
+# Show the full email, but not the full name.
+SPACESHIP_GIT_NAME_INDICATION="long_email"
+```
