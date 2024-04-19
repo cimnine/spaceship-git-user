@@ -44,7 +44,7 @@ _spaceship_git_user() {
     return;
   fi
 
-  if [ "${SPACESHIP_GIT_USER_SHOW}" = "auto" ] || [ "${SPACESHIP_GIT_USER_SHOW}" = "auto_${property}" ] ; then
+  if [ "${SPACESHIP_GIT_USER_SHOW}" = "auto" ]; then
     if [ "${text}" = "$(git config --global user.${property})" ]; then
       return;
     fi

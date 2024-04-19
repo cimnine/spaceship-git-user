@@ -110,16 +110,10 @@ SPACESHIP_GIT_USER_COLOR="red"
 # Default behavior.
 SPACESHIP_GIT_USER_SHOW="auto"
 
-# Only show the name section when the global user.name value is different from the local one.
-SPACESHIP_GIT_USER_SHOW="auto_name"
-
-# Only show the email section when the global user.email value is different from the local one.
-SPACESHIP_GIT_USER_SHOW="auto_email"
-
-# Always show user.name and user.email section
+# Always show user.name / user.email sections
 SPACESHIP_GIT_USER_SHOW="always"
 
-# Never show them (this might be useful if you use direnv)
+# Never show either section (this might be useful if you use direnv)
 SPACESHIP_GIT_USER_SHOW="never"
 SPACESHIP_GIT_USER_SHOW=false
 ```
@@ -128,7 +122,7 @@ SPACESHIP_GIT_USER_SHOW=false
 
 ```sh
 # Only show the icons, not the actual values.
-# Default
+# Default behavior.
 SPACESHIP_GIT_USER_INDICATION="short"
 
 # Show the full values.
