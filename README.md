@@ -34,7 +34,7 @@ prompt spaceship
 ### Zgen
 
 ```sh
-zgen load cimnine/spaceship-git-user spaceship-git-user main # <------ must be before loading spaceship!
+zgen load cimnine/spaceship-git-user spaceship-git-user.zsh main # <------ must be before loading spaceship!
 zgen load spaceship-prompt/spaceship-prompt spaceship
 ```
 
