@@ -82,63 +82,61 @@ SPACESHIP_RPROMPT_ORDER=(
 
 Use the following variables to change the behavior of the section.
 
-### SPACESHIP_GIT_USER_PREFIX
+### SPACESHIP_GIT_x_PREFIX
 
 ```sh
+SPACESHIP_GIT_EMAIL_PREFIX="with "
 SPACESHIP_GIT_USER_PREFIX="as "
 ```
 
-### SPACESHIP_GIT_USER_SYMBOL
+### SPACESHIP_GIT_x_SYMBOL
 
 ```sh
-SPACESHIP_GIT_USER_SYMBOL="♔ "
+SPACESHIP_GIT_EMAIL_SYMBOL="📧 "
+SPACESHIP_GIT_USER_SYMBOL="👤 "
 ```
 
-### SPACESHIP_GIT_EMAIL_SYMBOL
+### SPACESHIP_GIT_x_COLOR
 
 ```sh
-SPACESHIP_GIT_EMAIL_SYMBOL="✉︎ "
-```
-
-### SPACESHIP_GIT_USER_COLOR
-
-```sh
+SPACESHIP_GIT_EMAIL_COLOR="red"
 SPACESHIP_GIT_USER_COLOR="red"
 ```
 
-### SPACESHIP_GIT_NAME_SHOW
+### SPACESHIP_GIT_USER_SHOW
 
 ```sh
 # Only show the sections in which the global value is different from the local one.
 # Default behavior.
-SPACESHIP_GIT_NAME_SHOW="auto"
+SPACESHIP_GIT_USER_SHOW="auto"
 
 # Only show the name section when the global user.name value is different from the local one.
-SPACESHIP_GIT_NAME_SHOW="auto_name"
+SPACESHIP_GIT_USER_SHOW="auto_name"
 
 # Only show the email section when the global user.email value is different from the local one.
-SPACESHIP_GIT_NAME_SHOW="auto_email"
+SPACESHIP_GIT_USER_SHOW="auto_email"
 
 # Always show user.name and user.email section
-SPACESHIP_GIT_NAME_SHOW="always"
+SPACESHIP_GIT_USER_SHOW="always"
 
 # Never show them (this might be useful if you use direnv)
-SPACESHIP_GIT_NAME_SHOW="never"
+SPACESHIP_GIT_USER_SHOW="never"
+SPACESHIP_GIT_USER_SHOW=false
 ```
 
-### SPACESHIP_GIT_NAME_INDICATION
+### SPACESHIP_GIT_USER_INDICATION
 
 ```sh
 # Only show the icons, not the actual values.
 # Default
-SPACESHIP_GIT_NAME_INDICATION="short"
+SPACESHIP_GIT_USER_INDICATION="short"
 
 # Show the full values.
-SPACESHIP_GIT_NAME_INDICATION="long"
+SPACESHIP_GIT_USER_INDICATION="long"
 
 # Show the full name, but not the full email.
-SPACESHIP_GIT_NAME_INDICATION="long_name"
+SPACESHIP_GIT_USER_INDICATION="long_name"
 
 # Show the full email, but not the full name.
-SPACESHIP_GIT_NAME_INDICATION="long_email"
+SPACESHIP_GIT_USER_INDICATION="long_email"
 ```
