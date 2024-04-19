@@ -15,8 +15,7 @@ spaceship_git_user_name() {
     "${SPACESHIP_GIT_NAME_SYMBOL}" \
     "${SPACESHIP_GIT_NAME_PREFIX}" \
     "${SPACESHIP_GIT_NAME_SUFFIX}" \
-    "${SPACESHIP_GIT_NAME_COLOR}" \
-    "long_name"
+    "${SPACESHIP_GIT_NAME_COLOR}"
 }
 
 spaceship_git_user_email() {
@@ -25,8 +24,7 @@ spaceship_git_user_email() {
     "${SPACESHIP_GIT_EMAIL_SYMBOL}" \
     "${SPACESHIP_GIT_EMAIL_PREFIX}" \
     "${SPACESHIP_GIT_EMAIL_SUFFIX}" \
-    "${SPACESHIP_GIT_EMAIL_COLOR}" \
-    "long_email"
+    "${SPACESHIP_GIT_EMAIL_COLOR}"
 }
 
 _spaceship_git_user() {
@@ -35,7 +33,6 @@ _spaceship_git_user() {
   prefix="${3}"
   suffix="${4}"
   color="${5}"
-  long_value="${6}"
 
   [ "${SPACESHIP_GIT_USER_SHOW}" = "never" ] && return
   [[ $SPACESHIP_GIT_USER_SHOW == false ]] && return
@@ -53,7 +50,7 @@ _spaceship_git_user() {
     fi
   fi
 
-  if [ "${SPACESHIP_GIT_USER_INDICATION}" != "long" ] && [ "${SPACESHIP_GIT_USER_INDICATION}" != "${long_value}" ]; then
+  if [ "${SPACESHIP_GIT_USER_INDICATION}" != "long" ] && [ "${SPACESHIP_GIT_USER_INDICATION}" != "long_${property}" ]; then
     text=""
   fi
 
