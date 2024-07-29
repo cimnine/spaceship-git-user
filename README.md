@@ -136,3 +136,47 @@ SPACESHIP_GIT_NAME_INDICATION="short"
 SPACESHIP_GIT_EMAIL_INDICATION="long"
 SPACESHIP_GIT_NAME_INDICATION="long"
 ```
+
+### SPACESHIP_GIT_EMAIL_PART
+
+```sh
+# Show the full git email address, for example 'user@domain.tld'.
+# Default behavior.
+SPACESHIP_GIT_EMAIL_PART="full"
+
+# Only show the part before the last '@', for example 'user'.
+SPACESHIP_GIT_EMAIL_PART="user"
+
+# Only show the part after the last '@', for example 'domain.tld'.
+SPACESHIP_GIT_EMAIL_PART="domain"
+```
+
+### SPACESHIP_GIT_EMAIL_PART_AFFIX
+
+```sh
+# Results in "user@…"
+# Default behavior.
+SPACESHIP_GIT_EMAIL_PART="user"
+SPACESHIP_GIT_EMAIL_PART_AFFIX="auto"
+
+# Results in "…@domain.tld"
+# Default behavior.
+SPACESHIP_GIT_EMAIL_PART="domain"
+SPACESHIP_GIT_EMAIL_PART_AFFIX="auto"
+
+# Results in "user@"
+SPACESHIP_GIT_EMAIL_PART="user"
+SPACESHIP_GIT_EMAIL_PART_AFFIX="@"
+
+# Results in "@domain.tld"
+SPACESHIP_GIT_EMAIL_PART="domain"
+SPACESHIP_GIT_EMAIL_PART_AFFIX="@"
+
+# Results in "user"
+SPACESHIP_GIT_EMAIL_PART="user"
+SPACESHIP_GIT_EMAIL_PART_AFFIX=""
+
+# Results in "domain.tld"
+SPACESHIP_GIT_EMAIL_PART="domain"
+SPACESHIP_GIT_EMAIL_PART_AFFIX=""
+```
